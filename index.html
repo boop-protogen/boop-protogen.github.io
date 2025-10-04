@@ -1,11 +1,124 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>A Website</title>
-  </head>
-  <body>
-    <p>Content of a Website.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beep</title>
+    <style>
+        /*
+        * Global Styles for Dark Mode
+        */
+        :root {
+            /* Colors */
+            --background-color: #121212; /* Very dark gray for background */
+            --text-color: #E0E0E0;      /* Light gray for body text */
+            --accent-color: #BB86FC;    /* Bright purple for primary accent */
+            --secondary-accent: #3700B3; /* Darker purple for hover/active states */
+            --card-background: #1E1E1E; /* Slightly lighter dark gray for elements/cards */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /*
+        * Layout and Typography
+        */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--secondary-accent);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        /*
+        * Interactive Elements
+        */
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--secondary-accent);
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: var(--background-color); /* Use dark background color for text on bright button */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: var(--secondary-accent); /* Darker purple on hover */
+            color: var(--text-color); /* Light text on darker button */
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /*
+        * Example Card/Element Styling
+        */
+        .card {
+            background-color: var(--card-background);
+            padding: 15px;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the My Website!</h1>
+        <p>This page uses a **dark mode** color scheme, primarily featuring a very dark gray background and light text, with a **vibrant purple** as the accent color.</p>
+
+        <div class="card">
+            <h2>About the Colors</h2>
+            <p>The color palette is inspired by material design's dark theme, where the main accent color (`var(--accent-color)`) is a bright, easily visible purple (`#BB86FC`) that stands out against the dark background. This ensures **accessibility** and visual appeal.</p>
+        </div>
+
+        <p>Here is an example of an interactive element:</p>
+
+        <button onclick="alert('You clicked the purple button!')">Click Me!</button>
+
+        <p>And here is an example of a link: <a href="https://example.com">Visit an Example Site</a>.</p>
+
+        <hr style="border-color: var(--secondary-accent); margin: 25px 0;">
+
+        <h3>Styling Details</h3>
+        <ul>
+            <li>**Background:** Dark gray (`#121212`) for a true dark mode.</li>
+            <li>**Text:** Light gray (`#E0E0E0`) for contrast.</li>
+            <li>**Accent:** A bright, bold purple (`#BB86FC`).</li>
+            <li>**Containers:** A slightly lighter dark gray (`#1E1E1E`) to separate content blocks.</li>
+        </ul>
+    </div>
+
+</body>
 </html>
